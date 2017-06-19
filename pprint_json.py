@@ -12,12 +12,12 @@ def load_data(filepath):
         print("Неожиданная ошибка!")
         exit(1)
     try:
-        data = json.load(file_handler)
+        jsondata = json.load(file_handler)
     except:
         print("Это не json формат!")
         exit(1)
     file_handler.close()
-    return data
+    return jsondata
 
 def pretty_print_json(json_data):
     """Выводить каждый параметром с отступом в два пробела, сортировать и учитывать UTF-8"""
